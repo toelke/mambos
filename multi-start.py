@@ -43,6 +43,9 @@ print("taking off!")
 [x.takeoff() for x in mambos]
 mambos[0].smart_sleep(2)
 
+[x.flip('front') for x in mambos]
+mambos[0].smart_sleep(2)
+
 print("landing")
 [x.land() for x in mambos]
 mambos[0].smart_sleep(2)
