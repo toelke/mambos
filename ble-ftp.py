@@ -16,11 +16,6 @@ mamboAddrs = ["d0:3a:2f:c6:e6:3b"]
 # remember to set True/False for the wifi depending on if you are using the wifi or the BLE to connect
 mambos = [Mambo(x, use_wifi=False) for x in mamboAddrs]
 
-
-def callback(mambo):
-    print(mambo.sensors)
-
-
 for mambo in mambos:
     print("trying to connect")
     success = mambo.connect(num_retries=3)
@@ -36,12 +31,12 @@ def land():
     print("disconnect")
     [x.disconnect() for x in mambos]
 
-
-[x.set_user_sensor_callback(callback, x) for x in mambos]
-
 m = mambos[0]
-m.drone_connection._safe_ble_write(characteristic=m.drone_connection.ftp_characteristics['NORMAL_FTP_HANDLING'], packet=b'\x02\x01LIS/')
 
-import code
+#m.safe_takeoff(5)
 
-code.interact(local=locals())
+#m.smart_sleep(1)
+
+m.drone_connection._safe_ble_write(characteristic=m.drone_connection.ftp_characteristics['NORMAL_FTP_HANDLING'], packet=b'\x04LIS/\x00')
+
+#m.smart_sleep(1)
