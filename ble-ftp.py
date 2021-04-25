@@ -1,9 +1,3 @@
-"""
-Demo the direct flying for the python interface
-
-Author: Amy McGovern
-"""
-
 from pyparrot.Minidrone import Mambo
 import sys
 
@@ -31,12 +25,6 @@ def land():
     print("disconnect")
     [x.disconnect() for x in mambos]
 
+
 m = mambos[0]
-
-#m.safe_takeoff(5)
-
-#m.smart_sleep(1)
-
-m.drone_connection._safe_ble_write(characteristic=m.drone_connection.ftp_characteristics['NORMAL_FTP_HANDLING'], packet=b'\x04LIS/\x00')
-
-#m.smart_sleep(1)
+m.drone_connection._safe_ble_write(characteristic=m.drone_connection.ftp_characteristics['NORMAL_FTP_HANDLING'], packet=b'\x03LIS/\x00')
