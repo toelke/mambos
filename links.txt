@@ -1,0 +1,8 @@
+https://pyparrot.readthedocs.io/en/latest/_modules/pyparrot/Minidrone.html#MinidroneSensors.set_user_callback_function
+https://pyparrot.readthedocs.io/en/latest/_modules/pyparrot/Minidrone.html#Minidrone
+https://pyparrot.readthedocs.io/en/latest/minidronecommands.html#flying
+https://github.com/amymcgovern/pyparrot/blob/bf4775ec1199b282e4edde1e4a8e018dcc8725e0/pyparrot/networking/bleConnection.py#L544
+https://github.com/amymcgovern/pyparrot/blob/bf4775ec1199b282e4edde1e4a8e018dcc8725e0/pyparrot/networking/bleConnection.py
+https://ianharvey.github.io/bluepy-doc/index.html
+https://wiki.paparazziuav.org/wiki/Ap.parrot_minidrone#How_to_connect
+
